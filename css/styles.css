@@ -1,0 +1,178 @@
+/*background: #323232*/
+/*map color: #424242*/
+/*items: #91c034*/
+/*city names: #a1a0a1*/
+/*disabled color: #363636*/
+
+html {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+}
+
+body {
+    background-color: #323232;
+    margin: 0;
+}
+
+/*  BUTTONS START*/
+#selector-btn {
+    position: absolute;
+    top: 80px;
+    left: 25px;
+    padding: 5px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #323232;
+    border: none;
+    border-radius: 2rem;
+    /*border: 1px solid #91c034;*/
+    color: #91c034;
+}
+
+#selector-btn:hover {
+    background-color: #91c034;
+    color: white;
+}
+
+/*  BUTTONS END */
+
+.map {
+    position: absolute;
+    top: 160px;
+    width: 100%;
+    margin: 0;
+}
+
+object {
+    margin: 0;
+    max-height: 100%;
+}
+#marker {
+    color: #91c034;
+}
+#time-box {
+    list-style: none;
+    height: 165px;
+    background: #363636;
+    margin: 20px 20px 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 180px;
+    height: 100%;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    position: relative;
+}
+
+.container:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.day{
+    background: #91c034;
+}
+
+h2, h5 {
+
+    font-weight: inherit;
+    margin: 0 10px 10px 10px;
+    font-size: small;
+}
+
+h1 {
+    font-weight: inherit;
+    font-size: 45px;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+}
+
+.location {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* POPUP START*/
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.overlay select {
+    font-size: 36px;
+    color: #818181;
+    background-color: #323232;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* POPUP END*/

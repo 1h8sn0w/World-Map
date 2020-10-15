@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1a3611ff60.js" crossorigin="anonymous"></script>
+    <title>Map</title>
+
+</head>
+
+<button id="selector-btn" class="button" onclick="openNav()">
+    <i class="fas fa-plus"></i>
+</button>
+<ol id="time-box">
+</ol>
+<div id="map" class="map">
+    <object data="svg/world-424242.svg" type="image/svg+xml" id="svgMap"></object>
+    <script src="js/main.js"></script>
+    <script src="js/timezones.js"></script>
+</div>
+<div id="overlay" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="#">Select country</a>
+        <select id="Country" name="County" onchange="createCitySelector()">
+        </select>
+        <a href="#">Select city</a>
+        <select id="City" name="City">
+        </select>
+        <a href="#" onclick="selectHandler()">Select</a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#">made by</a>
+        <a href="#">Volodymyr Chornous</a>
+    </div>
+
+</div>
+</body>
+</html>
